@@ -1,7 +1,15 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
+let imgSrc = ''
+
 function App() {
+  // 4 states for calculator goes here
+  const [height, setHeight] = useState(0)
+  const [weight, setWeight] = useState(0)
+  const [bmi, setBmi] = useState('')
+  const [message, setMessage] = useState('')
+
   return (
     <>
       <div className="App">
@@ -21,6 +29,15 @@ function App() {
               <button className="btn btn-outline" type="submit">Reload</button>
             </div>
           </form>
+          
+          <div className="center">
+            <h3>Your BMI is: {bmi}</h3>
+            <p>{message}</p>
+          </div>
+
+          <div className="img-container">
+            <img src={imgSrc} alt=''></img>
+          </div>
         </div>
       </div>
     </>

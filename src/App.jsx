@@ -7,12 +7,12 @@ function App() {
   // 4 states for calculator goes here
   const [height, setHeight] = useState(0)
   const [weight, setWeight] = useState(0)
-  const [bmi, setBmi] = useState('')
+  const [result, setResult] = useState('')
   const [message, setMessage] = useState('')
 
   return (
     <>
-      <div className="App">
+      <div className="app">
         <div className="container">
           <h2 className="center">BMI Calculator</h2>
           <form>
@@ -31,7 +31,7 @@ function App() {
           </form>
           
           <div className="center">
-            <h3>Your BMI is: {bmi}</h3>
+            <h3>Your BMI is: {result}</h3>
             <p>{message}</p>
           </div>
 

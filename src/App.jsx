@@ -10,6 +10,18 @@ function App() {
   const [result, setResult] = useState('')
   const [message, setMessage] = useState('')
 
+  let calculate = (event) => {
+    // This is here to prevent an invalid input
+    event.preventDefault()
+
+    if (weight === 0 || height === 0) {
+      alert('A valid number must be entered to proceed with calculation')
+    } else {
+      let bmi = (weight / (height * height) * 10000)
+      setBmi(bmi.toFixed(1))
+    }
+  }
+
   return (
     <>
       <div className="app">

@@ -41,7 +41,13 @@ input {
 
 
 .img-container {
+    border-style: none;
     height: 200px;
+}
+
+img {
+    border-style: none;
+    position: relative; left: 80px;
 }
 
 .btn {
@@ -51,6 +57,8 @@ input {
 .btn-outline {
     position: relative; top: 16px;
 }
+
+
 
 p {
     margin: 10px 0;

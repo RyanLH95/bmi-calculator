@@ -19,7 +19,17 @@ function App() {
     } else {
       let result = (weight / (height * height) * 10000)
       setResult(result.toFixed(1))
-    }
+
+      if (result < 18.5) {
+        setMessage('You are underweight')
+      } else if (result >= 18.5 && result < 24.9) {
+        setMessage('You are at a healthy weight')
+      } else if (result >= 25 && result < 29.9) {
+        setMessage('You are overweight')
+      } else {
+        setMessage('You are obese')
+      }
+     }
   }
   
   // this function is to clear result of bmi

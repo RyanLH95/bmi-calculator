@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
-let imgSrc = ''
+
 
 function App() {
   // 4 states for calculator goes here
@@ -31,6 +31,20 @@ function App() {
       }
      }
   }
+
+  let imgSrc;
+
+       if (result < 1) {
+         imgSrc = null
+      } else if (result < 18.5) {
+         imgSrc = '../src/assets/underweight.png'
+      } else if (result >= 18.5 && result < 24.9) {
+         imgSrc = '../src/assets/healthweight.png'
+      } else if (result >= 25 && result < 29.9) {
+         imgSrc = '../src/assets/overweight.png'
+      } else {
+         imgSrc = '../src/assets/obese.png'
+    }
   
   // this function is to clear result of bmi
   let reload = () => {
@@ -66,7 +80,7 @@ function App() {
           </div>
 
           <div className="img-container">
-            <img src={imgSrc} alt=''></img>
+            <img src={imgSrc} alt='' width='150' height='210'></img>
           </div>
         </div>
       </div>

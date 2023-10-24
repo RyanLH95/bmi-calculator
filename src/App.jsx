@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
 
-
-
 function App() {
   // 4 states for calculator goes here
   const [height, setHeight] = useState(0)
